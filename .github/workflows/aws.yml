@@ -24,7 +24,10 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-name: Deploy to Amazon ECS
+name: Amazon ECS "Deploy Task Definition" Action for GitHub Actions
+
+uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+
 
 on:
   push:
