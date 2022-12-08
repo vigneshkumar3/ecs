@@ -35,9 +35,9 @@ env:
   ECR_REPOSITORY: app-registry          # set this to your Amazon ECR repository name
   ECS_SERVICE: ecs_services                 # set this to your Amazon ECS service name
   ECS_CLUSTER: ecs_cluster                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: aws ecs first-run-task-definition # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: aws ecs first-run-task-definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: application           # set this to the name of the container in the
+  CONTAINER_NAME: sample-app           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:
@@ -57,8 +57,8 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
 
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID=AKIA2743TJ4MAOGPS7OH }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY=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 }}
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
